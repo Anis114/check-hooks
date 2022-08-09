@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import Desc from './Desc';
 
 function MovieCard(props) {  
 
@@ -30,7 +31,12 @@ function MovieCard(props) {
         <div>
              
             {props.movie.map((el,key)=>{return (
-            <h1>{el.title}</h1>
+            <><h1>{el.title}</h1>
+          <Desc movie={movie}></Desc>
+          
+          <h1>{elosterURL}</h1>
+          <h1>{el.rating}</h1>
+        </>
                );})}
         
             

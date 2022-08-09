@@ -5,11 +5,18 @@ import {useState} from 'react'
 function MovieList({movielist,addmovie}) {
   
     return (
+
+
+        <BrowserRouter>
+
         <div>
+
+
             {movielist.map((movie,key)=>{return (
-                <MovieCard movie={movie}addmovie={addmovie}></MovieCard>
+           <Route  path='/Desc'>  <MovieCard movie={movie}addmovie={addmovie}></MovieCard> </Route>
                );})}
         </div>
+        </BrowserRouter>
     );
 }
 
